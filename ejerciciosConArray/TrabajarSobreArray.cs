@@ -6,11 +6,13 @@ namespace ejerciciosConArray
 {
     class TrabajarSobreArray
     {
+        //1
         public double CalcularDeterminante2x2(double[,] arreglo)
         {
             return ((arreglo[0, 0] * arreglo[1, 1]) - (arreglo[1, 0] * arreglo[0, 1])); 
         }
 
+        //2
         public double CalcularDeterminante3x3(double[,] arreglo)
         {
             return  ((arreglo[0, 0] * arreglo[1, 1] * arreglo[2, 2]) +
@@ -21,6 +23,7 @@ namespace ejerciciosConArray
                      (arreglo[1, 0] * arreglo[0, 1] * arreglo[2, 2]));
         }
 
+        //3
         public void Menu()
         {
             Console.WriteLine("MENU" + "\n" + 
@@ -103,12 +106,14 @@ namespace ejerciciosConArray
             }
         }
 
-        
+        //PedirCadenaParImprimir() se usa en 4 y 5
         public string PedirCadenaParImprimir()
         {
             Console.WriteLine("Ingresar cadena: ");
             return Console.ReadLine();
         }
+
+        //4
         public void ImprimirStringCadaDosCaracters(string cadena)
         {
             int contador = 0;
@@ -140,6 +145,7 @@ namespace ejerciciosConArray
             }
         }
 
+        //5
         public void dividirCadenaEnSubcadenas(string cadena)
         {
             string[] cadenaDividida = cadena.Split(" ");
@@ -149,6 +155,7 @@ namespace ejerciciosConArray
             }
         }
 
+        //6
         public void sumarNumeros()
         {
             Console.WriteLine("Ingresar numeros separados por un espacio para sumar: ");

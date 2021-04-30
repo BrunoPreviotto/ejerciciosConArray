@@ -18,6 +18,9 @@ namespace ejerciciosConArray
             //5//arrays.dividirCadenaEnSubcadenas(arrays.PedirCadenaParImprimir());
             //6//arrays.sumarNumeros();
 
+            TrabajarSobreArraysDesdeEj7 arraysDesdeEj7 = new TrabajarSobreArraysDesdeEj7();
+            arraysDesdeEj7.PedirSueldos();
+
         }
     }
 }
