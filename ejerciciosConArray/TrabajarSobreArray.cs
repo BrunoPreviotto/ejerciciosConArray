@@ -55,31 +55,30 @@ namespace ejerciciosConArray
         {
             Console.WriteLine("Valor a inserta y posicion separados por coma: ");
             string [] insertar = Console.ReadLine().Split(",");
-
             
-                if (Int32.Parse(insertar[1]) < cadena.Length && cadena[cadena.Length - 1].Equals(""))
+            if (Int32.Parse(insertar[1]) < cadena.Length && cadena[cadena.Length - 1].Equals(""))
+            {
+                bool bandera = true;
+                int j = 0;
+                while (bandera)
                 {
-                    bool bandera = true;
-                    int j = 0;
-                    while (bandera)
+                    if (cadena[j].Equals(""))
                     {
-                        if (cadena[j].Equals(""))
+                        for (int s = 0; s <= (j- Int32.Parse(insertar[1])); s++)
                         {
-                            for (int s = 0; s <= (j- Int32.Parse(insertar[1])); s++)
-                            {
-                                cadena[j-s] = cadena[j-s-1];
-                            }
-                            bandera = false;
+                            cadena[j-s] = cadena[j-s-1];
                         }
-                        j++;
+                        bandera = false;
                     }
-
-                    for (int i = 0; i < Int32.Parse(insertar[1]); i++)
-                    {
-                        cadena[Int32.Parse(insertar[1])] = insertar[0];
-                    }
-
+                    j++;
                 }
+
+                for (int i = 0; i < Int32.Parse(insertar[1]); i++)
+                {
+                    cadena[Int32.Parse(insertar[1])] = insertar[0];
+                }
+
+            }
             for(int i = 0; i < cadena.Length; i++)
             {
                 Console.WriteLine(cadena[i]);
@@ -90,7 +89,31 @@ namespace ejerciciosConArray
 
         public void BorrarString(string[] cadena)
         {
+            Console.WriteLine("Posicion del valor a borrar: ");
+            string borrar = Console.ReadLine();
 
+            for (int i = 0; i < cadena.Length-2; i++)
+            {
+                cadena[Int32.Parse(borrar) + i] = cadena[Int32.Parse(borrar) + i + 1];
+            }
+            
+            for (int i = 0; i < cadena.Length; i++)
+            {
+                Console.WriteLine(cadena[i]);
+            }
         }
+
+        public void ImprimirStringCadaDosCaracters(string cadena)
+        {
+            string nombre = ""; 
+            foreach (char nom in cadena)
+            {
+                if (cadena.Length % 2 == 0)
+                {
+                    
+                }
+            }
+        }
+
     }
 }
