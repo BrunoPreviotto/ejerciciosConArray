@@ -103,17 +103,64 @@ namespace ejerciciosConArray
             }
         }
 
+        
+        public string PedirCadenaParImprimir()
+        {
+            Console.WriteLine("Ingresar cadena: ");
+            return Console.ReadLine();
+        }
         public void ImprimirStringCadaDosCaracters(string cadena)
         {
+            int contador = 0;
             string nombre = ""; 
             foreach (char nom in cadena)
             {
+                nombre += nom;
                 if (cadena.Length % 2 == 0)
                 {
-                    
+                    if (nombre.Length == 2)
+                    {
+                        Console.Write(nombre + " ");
+                        nombre = "";
+                    }
                 }
+                else
+                {
+                    if (nombre.Length == 2)
+                    {
+                        Console.Write(nombre + " ");
+                        nombre = "";
+                    }
+                    if(contador == cadena.Length - 1)
+                    {
+                        Console.Write(nom);
+                    }
+                }
+                contador++;
             }
         }
+
+        public void dividirCadenaEnSubcadenas(string cadena)
+        {
+            string[] cadenaDividida = cadena.Split(" ");
+            foreach (string imprimir in cadenaDividida)
+            {
+                Console.WriteLine(imprimir);
+            }
+        }
+
+        public void sumarNumeros()
+        {
+            Console.WriteLine("Ingresar numeros separados por un espacio para sumar: ");
+            string[] ingreso = Console.ReadLine().Split(" ");
+            int resultado = 0;
+            foreach (string numero in ingreso){
+                resultado += Int32.Parse(numero);
+            }
+            Console.WriteLine(resultado);
+        }
+
+
 
     }
 }

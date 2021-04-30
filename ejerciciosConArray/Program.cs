@@ -14,6 +14,9 @@ namespace ejerciciosConArray
             //3//string[] nombres = new string[10] { "Hola","Como", "estas", "?","","","","","",""};
             //arrays.Menu();
             //arrays.TrabajarSobreMenu(nombres);
+            //4//arrays.ImprimirStringCadaDosCaracters(arrays.PedirCadenaParImprimir());
+            //5//arrays.dividirCadenaEnSubcadenas(arrays.PedirCadenaParImprimir());
+            //6//arrays.sumarNumeros();
 
         }
     }
