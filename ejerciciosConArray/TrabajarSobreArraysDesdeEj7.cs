@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Collections;
 
 namespace ejerciciosConArray
 {
     class TrabajarSobreArraysDesdeEj7
     {
 
+        //7
         public void PedirSueldos()
         {
             bool esNegativo = true;
@@ -49,7 +51,95 @@ namespace ejerciciosConArray
                 i++;
             }
         }
-        
+
+
+        //8
+
+        public void PromedioAlumnos(double[,] calificaciones, ArrayList nombres)
+        {
+            double resultado = 0;
+            int contador = 1;
+            ArrayList promedio = new ArrayList();
+            foreach (double arr in calificaciones)
+            {
+                resultado += arr;
+                if (contador == 10)
+                {
+                    promedio.Add(resultado/10);
+                    contador = 0;
+                    resultado = 0;
+                }
+                contador++;
+            }
+            promedio.Add(resultado / 10);
+            contador = 0;
+            foreach (Object imp in nombres)
+            {
+                Console.WriteLine($"Promedio de {imp}: " + promedio[contador]);
+                contador++;
+            }
+        }
+
+        public void CalificacionMaxima(double[,] calificaciones, ArrayList nombres)
+        {
+            double masAlta = 0;
+            int contador = 1;
+            ArrayList notaMasAlta = new ArrayList();
+            foreach (double arr in calificaciones)
+            {
+                if (arr > masAlta)
+                {
+                    masAlta = arr;
+                }
+                if (contador == 10)
+                {
+                    notaMasAlta.Add(masAlta);
+                    contador = 0;
+                    masAlta = 0;
+                }
+                contador++;
+            }
+            contador = 0;
+            foreach (Object arr in nombres)
+            {
+                Console.WriteLine($"Nota mas alta de {arr} es: " + notaMasAlta[contador]);
+                contador++;
+            }
+        }
+
+        public void CalificacionMinima(double[,] calificaciones, ArrayList nombres)
+         {
+            double masBaja = 100000000;
+            int contador = 1;
+            ArrayList notaMasBaja = new ArrayList();
+            foreach (double arr in calificaciones)
+            {
+                if (arr < masBaja)
+                {
+                    masBaja = arr;
+                }
+                if (contador == 10)
+                {
+                    notaMasBaja.Add(masBaja);
+                    contador = 0;
+                    masBaja = 10000000000;
+                }
+                contador++;
+            }
+            contador = 0;
+            foreach (Object arr in nombres)
+            {
+                Console.WriteLine($"Nota mas baja de {arr} es: " + notaMasBaja[contador]);
+                contador++;
+            }
+        }
+
+        //9
+
+        public void Diccionario()
+        {
+
+        }
 
     }
 }
