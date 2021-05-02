@@ -136,10 +136,31 @@ namespace ejerciciosConArray
 
         //9
 
-        public void Diccionario()
+        public void Diccionario(Hashtable diccionario, string valorBuscado)
         {
-
+            DateTimeOffset fecha = DateTimeOffset.Now;
+            foreach (DictionaryEntry table in diccionario)
+            {
+                if (table.Key.Equals(valorBuscado))
+                {
+                    Console.WriteLine($"{table.Key} : {table.Value}. Fecha: {fecha.Day}-{fecha.Month}-{fecha.Year}");
+                }
+                
+            }
         }
+
+        //10
+
+        public void mostrarEnOrdenAlfabetico(ArrayList cadenas)
+        {
+            ArrayList primerasLetras = new ArrayList();
+            cadenas.Sort();
+            foreach (string ca in cadenas)
+            {
+                Console.WriteLine(ca);
+            }
+
+        }   
 
     }
 }

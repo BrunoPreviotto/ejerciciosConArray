@@ -36,15 +36,22 @@ namespace ejerciciosConArray
             arraysDesdeEj7.CalificacionMaxima(calificaciones, alumnos);
             arraysDesdeEj7.CalificacionMinima(calificaciones, alumnos);*/
 
-            /*Hashtable diccionario = new Hashtable();
+            /*9//Hashtable diccionario = new Hashtable();
             diccionario.Add("Casa", "Construcción cubierta destinada a ser habitada.");
             diccionario.Add("Vaso", "Recipiente para líquidos u otras cosas, parecido al anterior, pero que no se usa para beber.");
             diccionario.Add("Mesa", "Mueble formado por un tablero horizontal, sostenido por uno o varios pies, con la altura conveniente para poder realizar alguna actividad sobre ella o dejar cosas encima.");
-            diccionario.Add("Silla", "Asiento individual con patas y respaldo.");*/
+            diccionario.Add("Silla", "Asiento individual con patas y respaldo.");
+            string valorBuscado = "Mesa";
+            arraysDesdeEj7.Diccionario(diccionario, valorBuscado);*/
 
-            DateTime fecha = new DateTime(2021, 5, 2);
-            Console.WriteLine(fecha);
-              
+            ArrayList cadenas = new ArrayList();
+            cadenas.Add("Esto");
+            cadenas.Add("Es");
+            cadenas.Add("Una");
+            cadenas.Add("Cadena");
+            cadenas.Add("De Texto");
+            arraysDesdeEj7.mostrarEnOrdenAlfabetico(cadenas);
+
         }
     }
 }
